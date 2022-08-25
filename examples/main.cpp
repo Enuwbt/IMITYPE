@@ -45,7 +45,7 @@ int main(){
     
     initialize(0x0b02000); <- loaded base
     
-    static  IMTYPE<void, "Optine::print()"_> print = {opt, 0x032dc008}; <- set function addres
+    static IMTYPE<void, "Optine::print()"_> print = {opt, 0x032dc008}; // <- set function addres
     
     print(); // -> Optine::print()
     
