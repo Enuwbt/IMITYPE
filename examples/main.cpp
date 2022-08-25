@@ -16,7 +16,7 @@ void Optine::print(int i) {
 }
 
 void printGlobal(){
-    println("Global::printGlobal");
+    println("Global::printGlobal()");
 }
 
 
@@ -39,11 +39,11 @@ int main(){
     
     static IMTYPE<void, "GLOBAL::printG()"_> printG = {nullptr, &printGlobal};
     
-    printG(); // -> Global::printGlobal
+    printG(); // -> Global::printGlobal()
     
     //=======================Call Class Member with address=========================//
     
-    initialize(0xb02000); <- loaded base
+    initialize(0x0b02000); <- loaded base
     
     static  IMTYPE<void, "Optine::print()"_> print = {opt, 0x032dc008}; <- set function addres
     
