@@ -37,7 +37,7 @@ int main(){
     
     //======================Call Global Function with address=======================//
     
-    static IMTYPE<void, "GLOBAL::printG"_> printG = {nullptr, &printGlobal};
+    static IMTYPE<void, "GLOBAL::printG()"_> printG = {nullptr, &printGlobal};
     
     printG(); // -> Global::printGlobal
     
